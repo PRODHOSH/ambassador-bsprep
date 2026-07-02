@@ -40,6 +40,15 @@ const itemVariants = {
   },
 };
 
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 export default function Features() {
   return (
     <section id="features" className="bg-white text-black py-20 sm:py-32 px-5 sm:px-8 md:px-12 font-semibold uppercase">
@@ -48,17 +57,24 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8"
+          variants={fadeUpVariants}
+          className="max-w-2xl mb-16 md:mb-24"
         >
-          <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-5xl md:text-7xl leading-[0.9] tracking-tight">
-              Built For <br />
-              <span className="text-[#5E0ED7]">High Impact</span>
-            </h2>
-          </div>
-          <p className="text-xs sm:text-sm tracking-widest max-w-[280px] text-left md:text-right">
-            The ultimate zero-cost accelerator for driven students.
+          <h2 className="text-3xl sm:text-5xl md:text-6xl tracking-tight mb-6">
+            <span className="text-black">CORE</span> <span className="text-[#5E0ED7]">RESPONSIBILITIES</span>
+          </h2>
+          <p className="text-sm sm:text-base normal-case font-medium opacity-60 leading-relaxed mb-8">
+            As a Growth Fellow, your primary mission is to expand the BSPrep community within your campus. 
+            You&apos;ll be the face of the brand, leading initiatives, and driving engagement.
           </p>
+          <a href="#" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors font-semibold tracking-widest text-xs uppercase">
+            Download PDF Guidelines
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
         </motion.div>
 
         <motion.div
@@ -70,7 +86,7 @@ export default function Features() {
         >
           {FEATURES.map((feature, i) => (
             <motion.div key={i} variants={itemVariants} className="flex flex-col gap-6 group">
-              <div className="p-4 rounded-2xl bg-black/5 w-fit group-hover:bg-[#5E0ED7]/10 transition-colors">
+              <div className="p-4 bg-black/5 w-fit group-hover:bg-[#5E0ED7]/10 transition-colors">
                 {feature.icon}
               </div>
               <div>

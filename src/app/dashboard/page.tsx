@@ -3,8 +3,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LogOut } from "lucide-react";
+import { useSession, signOut } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 export default function DashboardPage() {
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect("/dashboard/login");
+    },
+  });
+
+  if (status === "loading") {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-[#5E0ED7] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-black text-white flex flex-col font-semibold tracking-widest uppercase">
       {/* Navigation */}
@@ -16,16 +33,18 @@ export default function DashboardPage() {
           <span className="text-sm">Dashboard</span>
         </div>
 
-        <Link href="/dashboard/login" className="flex items-center gap-2 text-xs text-white/60 hover:text-white transition-colors">
+        <button onClick={() => signOut({ callbackUrl: '/' })} className="flex items-center gap-2 text-xs text-white/60 hover:text-white transition-colors cursor-pointer">
           <LogOut size={16} />
           <span className="hidden sm:inline">Sign Out</span>
-        </Link>
+        </button>
       </header>
 
       {/* Content */}
       <div className="flex-1 p-5 sm:p-8 max-w-7xl mx-auto w-full">
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 mb-8">
-          <h1 className="text-2xl sm:text-3xl mb-2 text-[#5E0ED7]">Welcome, Fellow!</h1>
+          <h1 className="text-2xl sm:text-3xl mb-2 text-[#5E0ED7]">
+            Welcome, {session?.user?.name || "Fellow"}!
+          </h1>
           <p className="text-xs sm:text-sm normal-case font-medium opacity-60">Your ambassador journey starts here.</p>
         </div>
 

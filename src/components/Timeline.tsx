@@ -34,7 +34,9 @@ export default function Timeline() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl sm:text-5xl tracking-tight mb-4">Program Timeline</h2>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl tracking-tight mb-4">
+            <span className="text-black">APPLICATION</span> <span className="text-[#5E0ED7]">JOURNEY</span>
+          </h2>
           <p className="text-xs sm:text-sm opacity-50">Your journey to becoming a Growth Fellow</p>
         </motion.div>
 
@@ -52,7 +54,7 @@ export default function Timeline() {
                 <div className="w-2 h-2 bg-[#5E0ED7] rounded-full" />
               </div>
               
-              <div className="bg-black/5 p-6 rounded-2xl border border-black/5 hover:border-[#5E0ED7]/30 transition-colors group">
+              <div className="bg-black/5 p-6 border border-black/5 hover:border-[#5E0ED7]/30 transition-colors group">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform">
                     {step.icon}

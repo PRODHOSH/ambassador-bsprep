@@ -39,7 +39,9 @@ export default function Faq() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl sm:text-5xl tracking-tight mb-4">FAQ</h2>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl tracking-tight mb-4">
+            <span className="text-black">COMMON</span> <span className="text-[#5E0ED7]">QUESTIONS</span>
+          </h2>
           <p className="text-xs sm:text-sm opacity-50">Everything you need to know</p>
         </motion.div>
 
@@ -53,7 +55,7 @@ export default function Faq() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: index * 0.1 }}
-                className="border border-black/10 rounded-2xl overflow-hidden bg-white"
+                className="border border-black/10 overflow-hidden bg-white"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}

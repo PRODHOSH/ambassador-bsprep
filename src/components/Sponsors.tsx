@@ -17,7 +17,7 @@ export default function Sponsors() {
         <h2 className="text-2xl sm:text-4xl tracking-widest mb-4">Our Sponsors</h2>
         <p className="text-[10px] sm:text-xs opacity-50 mb-16 text-center">Backed by industry leaders</p>
         
-        <div className="flex flex-wrap justify-center gap-10 sm:gap-16 md:gap-24 items-center">
+        <div className="flex flex-wrap justify-center gap-10 sm:gap-16 md:gap-24 items-center mb-16">
           {SPONSORS.map((sponsor, i) => (
             <motion.div
               key={sponsor.name}
@@ -36,6 +36,10 @@ export default function Sponsors() {
             </motion.div>
           ))}
         </div>
+
+        <a href="/sponsors" className="text-xs sm:text-sm tracking-widest text-[#5E0ED7] hover:text-black border-b border-[#5E0ED7] hover:border-black transition-colors pb-1">
+          Learn More About Our Sponsors
+        </a>
       </div>
     </section>
   );
