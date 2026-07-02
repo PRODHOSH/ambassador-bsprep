@@ -37,8 +37,8 @@ export default function Sponsors() {
           ))}
         </div>
 
-        <a href="/sponsors" className="text-xs sm:text-sm tracking-widest text-[#5E0ED7] hover:text-black border-b border-[#5E0ED7] hover:border-black transition-colors pb-1">
-          Learn More About Our Sponsors
+        <a href="/sponsors" className="inline-flex items-center gap-2 text-xs sm:text-sm tracking-widest text-white bg-black px-6 py-3 rounded-full hover:bg-[#5E0ED7] transition-all shadow-md hover:shadow-lg mt-4">
+          CHECK OUT OUR SPONSORS <span className="text-lg leading-none">&rarr;</span>
         </a>
       </div>
     </section>
