@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/dashboard/'],
+      disallow: ['/dashboard/', '/admin/'],
     },
     sitemap: 'https://ambassador.bsprep.in/sitemap.xml',
   }
