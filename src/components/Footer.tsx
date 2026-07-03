@@ -56,6 +56,7 @@ export default function Footer() {
           <span className="opacity-50 mb-2">Websites</span>
           <a href="https://bsprep.in" target="_blank" rel="noreferrer" className="hover:text-[#5E0ED7] transition-colors">Main Website</a>
           <a href="https://blog.bsprep.in" target="_blank" rel="noreferrer" className="hover:text-[#5E0ED7] transition-colors">Blogs Portal</a>
+          <a href="https://pages.razorpay.com/support-bsprep" target="_blank" rel="noreferrer" className="hover:text-[#5E0ED7] transition-colors mt-2 text-[#5E0ED7] font-bold">Donate / Support</a>
         </div>
 
         {/* Forms & Contact Column */}

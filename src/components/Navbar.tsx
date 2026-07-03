@@ -24,8 +24,8 @@ export default function Navbar() {
     setIsTop(latest < 50);
   });
 
-  // Hide entirely on dashboard
-  if (pathname?.startsWith("/dashboard")) {
+  // Hide entirely on dashboard and admin routes
+  if (pathname?.startsWith("/dashboard") || pathname?.startsWith("/admin")) {
     return null;
   }
 

@@ -7,7 +7,7 @@ import Image from "next/image";
 const STATS = [
   { value: "10K", label: "STUDENTS\nIMPACTED" },
   { value: "50", label: "PREMIUM\nREWARDS" },
-  { value: "100", label: "GROWTH\nFELLOWS" },
+  { value: "100", label: "STUDENT\nAMBASSADORS" },
 ];
 
 const HEADING_WORDS = ["Growth", "Fellows", "Portal"];
@@ -146,7 +146,7 @@ export default function Hero() {
             variants={fadeUp}
             className="w-[110px] sm:w-[160px] md:w-[250px] shrink-0 text-[8px] sm:text-[10px] md:text-xs tracking-widest text-left md:text-right"
           >
-            An Exclusive, Invite-Only Portal For BSPrep Growth Fellows To Earn Rewards And Build Their Career
+            The Official Portal For Student Ambassadors To Unlock Exclusive Rewards And Opportunities
           </motion.p>
 
           <div className="flex flex-col items-end">

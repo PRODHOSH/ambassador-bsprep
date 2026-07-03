@@ -63,10 +63,12 @@ export default function Features() {
           <h2 className="text-3xl sm:text-5xl md:text-6xl tracking-tight mb-6">
             <span className="text-black">CORE</span> <span className="text-[#5E0ED7]">RESPONSIBILITIES</span>
           </h2>
-          <p className="text-sm sm:text-base normal-case font-medium opacity-60 leading-relaxed mb-8">
-            As a Growth Fellow, your primary mission is to expand the BSPrep community within your campus. 
-            You&apos;ll be the face of the brand, leading initiatives, and driving engagement.
-          </p>
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm sm:text-base font-medium opacity-70 normal-case leading-relaxed">
+              As a Student Ambassador, your primary mission is to expand the BSPrep community within your campus. 
+              You are the bridge between us and the next generation of tech leaders.
+            </p>
+          </div>
           <a href="#" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors font-semibold tracking-widest text-xs uppercase">
             Download PDF Guidelines
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square">

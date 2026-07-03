@@ -18,9 +18,10 @@ const TIMELINE_STEPS = [
   },
   {
     icon: <Rocket className="w-6 h-6 text-[#5E0ED7]" />,
-    date: "Sept 10 - Oct 30",
-    title: "The Growth Program",
-    description: "The official BSPrep Ambassador portal unlocks. Start building and earning.",
+    date: "Aug 20 - Sep 05",
+    title: "The Ambassador Program",
+    description: "Launch of the official BSPrep Ambassador Program.",
+    isActive: true,
   },
 ];
 
@@ -35,9 +36,9 @@ export default function Timeline() {
           className="mb-16 text-center"
         >
           <h2 className="text-3xl sm:text-5xl md:text-6xl tracking-tight mb-4">
-            <span className="text-black">APPLICATION</span> <span className="text-[#5E0ED7]">JOURNEY</span>
+            <span className="text-black">YOUR</span> <span className="text-[#5E0ED7]">TIMELINE</span>
           </h2>
-          <p className="text-xs sm:text-sm opacity-50">Your journey to becoming a Growth Fellow</p>
+          <p className="text-xs sm:text-sm opacity-50">Your journey to becoming a Student Ambassador</p>
         </motion.div>
 
         <div className="relative border-l-2 border-[#5E0ED7]/20 ml-4 sm:ml-8 space-y-12 pb-4">
