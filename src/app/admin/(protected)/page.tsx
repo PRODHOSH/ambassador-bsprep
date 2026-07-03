@@ -22,6 +22,7 @@ export default async function AdminDashboardPage() {
   const { data: topAmbassadors } = await supabase
     .from("ambassadors")
     .select("name, email, points, referral_code")
+    .eq("is_admin", false)
     .order("points", { ascending: false })
     .limit(5);
 

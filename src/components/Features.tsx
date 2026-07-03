@@ -69,7 +69,7 @@ export default function Features() {
               You are the bridge between us and the next generation of tech leaders.
             </p>
           </div>
-          <a href="#" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors font-semibold tracking-widest text-xs uppercase">
+          <a href="/docs/bsprep_overview.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors font-semibold tracking-widest text-xs uppercase">
             Download PDF Guidelines
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>

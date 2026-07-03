@@ -14,6 +14,7 @@ export default async function LeaderboardPage() {
   const { data: ambassadors, error } = await supabase
     .from("ambassadors")
     .select("id, name, referral_code, points")
+    .eq("is_admin", false)
     .order("points", { ascending: false });
 
   return (

@@ -6,6 +6,7 @@ export default async function AdminLeaderboardPage() {
   const { data: ambassadors } = await supabase
     .from("ambassadors")
     .select("id, name, email, points, referral_code")
+    .eq("is_admin", false)
     .order("points", { ascending: false });
 
   return (
