@@ -42,8 +42,11 @@ export default function Navbar() {
         className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-5 sm:px-8 md:px-12 py-5 font-semibold uppercase text-black border-b"
       >
         <Link href="/">
-          <div className="relative w-10 h-10 shrink-0 cursor-pointer">
-            <Image src="/bsprep.png" alt="BSPrep Logo" fill className="object-contain" />
+          <div className="flex items-center gap-3 cursor-pointer">
+            <div className="relative w-8 sm:w-10 h-8 sm:h-10 shrink-0">
+              <Image src="/bsprep.png" alt="BSPrep Logo" fill className="object-contain" />
+            </div>
+            <span className="text-xl sm:text-2xl tracking-tighter font-bold">BSPREP</span>
           </div>
         </Link>
 
@@ -81,8 +84,11 @@ export default function Navbar() {
           >
             {/* Top Row */}
             <div className="flex justify-between items-center">
-              <div className="relative w-10 h-10 shrink-0">
-                <Image src="/bsprep.png" alt="BSPrep Logo" fill className="object-contain" />
+              <div className="flex items-center gap-3">
+                <div className="relative w-8 sm:w-10 h-8 sm:h-10 shrink-0">
+                  <Image src="/bsprep.png" alt="BSPrep Logo" fill className="object-contain" />
+                </div>
+                <span className="text-xl sm:text-2xl tracking-tighter font-bold text-black">BSPREP</span>
               </div>
 
               <button
