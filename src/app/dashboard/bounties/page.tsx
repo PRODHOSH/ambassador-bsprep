@@ -36,7 +36,7 @@ export default async function BountiesPage() {
 
   return (
     <main className="p-4 sm:p-6 md:p-8 max-w-7xl w-full font-semibold uppercase tracking-widest text-black dark:text-white">
-      <div className="flex justify-between items-end mb-6">
+      <div className="flex justify-between items-end mb-6" id="tour-bounties-list">
         <div>
           <h1 className="text-xl sm:text-2xl mb-1 text-black dark:text-white tracking-tight">Active Bounties</h1>
           <p className="text-[10px] sm:text-xs normal-case font-medium opacity-60">Complete tasks to earn massive bonus points.</p>

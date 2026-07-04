@@ -7,6 +7,7 @@ import "./globals.css";
 
 const sora = Sora({
   subsets: ["latin"],
+  variable: "--font-sora",
 });
 
 export const metadata: Metadata = {
@@ -55,7 +56,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sora.className} h-full antialiased`}
+      className={`${sora.className} ${sora.variable} h-full antialiased`}
       style={{ fontSize: "90%" }}
     >
       <body className="min-h-full flex flex-col">

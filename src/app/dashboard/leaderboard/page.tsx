@@ -20,7 +20,7 @@ export default async function LeaderboardPage() {
   return (
     <main className="p-4 sm:p-6 md:p-8 max-w-7xl w-full font-semibold uppercase tracking-widest text-black dark:text-white min-h-[80vh] flex flex-col">
       <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-        <div>
+        <div id="tour-leaderboard-header">
           <h1 className="text-xl sm:text-2xl mb-1 text-black dark:text-white tracking-tight">Global Leaderboard</h1>
           <p className="text-[10px] sm:text-xs normal-case font-medium opacity-60">See how you stack up against other ambassadors.</p>
         </div>

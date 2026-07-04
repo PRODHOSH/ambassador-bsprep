@@ -77,7 +77,7 @@ export default async function DashboardPage() {
           <p className="text-xs normal-case font-medium opacity-60">Your ambassador journey starts here.</p>
           
           {ambassadorData?.referral_code && (
-            <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3" id="tour-referral-link">
               <div className="inline-flex items-center gap-4 bg-slate-50 dark:bg-white/5 px-4 py-3 rounded-xl border border-slate-200 dark:border-white/10 text-xs shadow-inner overflow-x-auto max-w-full">
                 <span className="opacity-60 whitespace-nowrap">Your Referral Link:</span> 
                 <span className="text-[#5E0ED7] sm:text-base font-bold tracking-widest lowercase whitespace-nowrap mr-2">

@@ -57,7 +57,7 @@ export default async function RewardsPage() {
 
   return (
     <main className="p-4 sm:p-6 md:p-8 max-w-7xl w-full font-semibold uppercase tracking-widest text-black dark:text-white min-h-[80vh] flex flex-col">
-      <div className="mb-10">
+      <div className="mb-10" id="tour-rewards-list">
         <h1 className="text-xl sm:text-2xl mb-2 text-black dark:text-white tracking-tight">
           Prize Pool
         </h1>

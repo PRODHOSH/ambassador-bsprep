@@ -2,6 +2,8 @@ import Sidebar from "@/components/Sidebar";
 import TopNav from "@/components/TopNav";
 import MobileNav from "@/components/MobileNav";
 import { createClient } from "@/lib/supabase/server";
+import { OnboardingModal } from "@/components/OnboardingModal";
+import { TourProvider } from "@/components/TourProvider";
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient();
@@ -18,15 +20,18 @@ export default async function DashboardLayout({ children }: { children: React.Re
   }
 
   return (
-    <div className="flex min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white font-semibold transition-colors duration-300">
-      <Sidebar />
-      <div className="flex-1 flex flex-col overflow-x-hidden relative">
-        <TopNav user={user} points={points} />
-        <div className="flex-1 bg-[#FDFBF7] dark:bg-[#121212] transition-colors pb-20 md:pb-0">
-          {children}
+    <TourProvider>
+      <div className="flex min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white font-semibold transition-colors duration-300">
+        {user && <OnboardingModal />}
+        <Sidebar />
+        <div className="flex-1 flex flex-col overflow-x-hidden relative">
+          <TopNav user={user} points={points} />
+          <div className="flex-1 bg-[#FDFBF7] dark:bg-[#121212] transition-colors pb-20 md:pb-0">
+            {children}
+          </div>
         </div>
+        <MobileNav />
       </div>
-      <MobileNav />
-    </div>
+    </TourProvider>
   );
 }

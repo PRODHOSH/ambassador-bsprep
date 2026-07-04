@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Users, Target, ShieldAlert } from "lucide-react";
+import { LayoutDashboard, Users, Target, ShieldAlert, Bell } from "lucide-react";
 
 export default function AdminSidebar() {
   const pathname = usePathname();
@@ -12,6 +12,7 @@ export default function AdminSidebar() {
     { name: "Overview", href: "/admin", icon: LayoutDashboard },
     { name: "Leaderboard", href: "/admin/leaderboard", icon: Users },
     { name: "Bounty Review", href: "/admin/bounties", icon: Target },
+    { name: "Announcements", href: "/admin/announcements", icon: Bell },
   ];
 
   return (
