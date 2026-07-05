@@ -4,6 +4,7 @@ import { LogOut } from "lucide-react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import CopyLinkButton from "@/components/CopyLinkButton";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -93,13 +94,28 @@ export default async function DashboardPage() {
           <div className="bg-white dark:bg-[#1A1A1A] border border-slate-200 dark:border-white/10 rounded-3xl p-6 sm:p-8 shadow-sm transition-colors">
             <h2 className="text-lg mb-6 tracking-tight">Your Stats</h2>
             <div className="flex flex-col gap-4">
-              <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5">
+              <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5 transition-transform hover:scale-[1.02]">
                 <span className="text-[10px] opacity-60">Total Points</span>
-                <span className="text-2xl text-[#5E0ED7]">{points}</span>
+                <span className="text-2xl text-[#5E0ED7]">
+                  <AnimatedCounter value={points} />
+                </span>
               </div>
-              <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5">
+              <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5 transition-transform hover:scale-[1.02]">
                 <span className="text-[10px] opacity-60">Referrals</span>
-                <span className="text-2xl text-[#5E0ED7]">{referrals}</span>
+                <span className="text-2xl text-[#5E0ED7]">
+                  <AnimatedCounter value={referrals} />
+                </span>
+              </div>
+              <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5 transition-transform hover:scale-[1.02] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">🔥</span>
+                  <span className="text-[10px] opacity-60">Daily Streak</span>
+                </div>
+                <div className="flex items-baseline gap-1 text-[#5E0ED7]">
+                  <span className="text-2xl font-bold"><AnimatedCounter value={3} /></span>
+                  <span className="text-[10px] opacity-60">Days</span>
+                </div>
               </div>
             </div>
           </div>

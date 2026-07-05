@@ -154,11 +154,34 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Never miss an update. New bounties, townhall meetings, and program announcements will appear here.',
                 side: "top",
                 align: 'center',
+                onNextClick: () => {
+                  d.destroy();
+                  localStorage.setItem("bsprep_tour_step", "7");
+                  // We stay on the same page or go to dashboard to show topnav, let's just push to dashboard so it's clean
+                  router.push("/dashboard");
+                }
+              }
+            }
+          ]
+        });
+        d.drive();
+      } else if (tourStep === "7" && pathname === "/dashboard") {
+        const d = driver({
+          showProgress: true,
+          allowClose: false,
+          popoverClass: 'driverjs-theme',
+          steps: [
+            {
+              element: '#tour-profile-dropdown',
+              popover: {
+                title: 'Profile & Settings',
+                description: 'Click here to access your Settings, download your Official ID Card, and view your digital assets!',
+                side: "bottom",
+                align: 'end',
                 nextBtnText: 'Finish',
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "completed");
-                  router.push("/dashboard");
                 }
               }
             }

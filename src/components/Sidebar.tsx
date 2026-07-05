@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Target, Bell, LogOut, Users, Trophy, Gift } from "lucide-react";
+import { LayoutDashboard, Target, Bell, LogOut, Users, Trophy, Gift, Settings } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 
 export default function Sidebar() {
@@ -27,6 +27,7 @@ export default function Sidebar() {
     { name: "Bounties", href: "/dashboard/bounties", icon: Target },
     { name: "Referrals", href: "/dashboard/referrals", icon: Users },
     { name: "Announcements", href: "/dashboard/announcements", icon: Bell },
+    { name: "Settings", href: "/dashboard/settings", icon: Settings },
   ];
 
   return (

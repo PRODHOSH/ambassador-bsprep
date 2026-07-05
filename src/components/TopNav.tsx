@@ -4,8 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { Sun, Moon, LogOut, ChevronDown } from "lucide-react";
+import { Sun, Moon, LogOut, ChevronDown, Settings } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
+import Link from "next/link";
 
 interface TopNavProps {
   user: any;
@@ -58,6 +59,7 @@ export default function TopNav({ user, points }: TopNavProps) {
         {/* Profile Dropdown */}
         <div className="relative">
           <button 
+            id="tour-profile-dropdown"
             onClick={() => setDropdownOpen(!dropdownOpen)}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
@@ -92,6 +94,14 @@ export default function TopNav({ user, points }: TopNavProps) {
                 </div>
                 
                 <div className="p-2">
+                  <Link 
+                    href="/dashboard/settings"
+                    onClick={() => setDropdownOpen(false)}
+                    className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-white/5 transition-all uppercase tracking-wider mb-1"
+                  >
+                    <Settings size={14} />
+                    Settings
+                  </Link>
                   <button 
                     onClick={handleLogout}
                     className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-400/10 transition-all uppercase tracking-wider"
