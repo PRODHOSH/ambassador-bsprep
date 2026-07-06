@@ -1,4 +1,3 @@
-# Ambassador BSPrep
 
 ![BSPrep Ambassador](./public/open-graph.png)
 
