@@ -18,7 +18,7 @@ const TIMELINE_STEPS = [
   },
   {
     icon: <Rocket className="w-6 h-6 text-[#5E0ED7]" />,
-    date: "Aug 20 - Sep 05",
+    date: "Sept 10 - Oct 30",
     title: "The Ambassador Program",
     description: "Launch of the official BSPrep Ambassador Program.",
     isActive: true,
