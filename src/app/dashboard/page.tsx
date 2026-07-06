@@ -103,7 +103,7 @@ export default async function DashboardPage() {
               <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5 transition-transform hover:scale-[1.02]">
                 <span className="text-[10px] opacity-60">Referrals</span>
                 <span className="text-2xl text-[#5E0ED7]">
-                  <AnimatedCounter value={referrals} />
+                  <AnimatedCounter value={referrals ?? 0} />
                 </span>
               </div>
               <div className="bg-slate-50 dark:bg-white/5 rounded-xl p-5 flex justify-between items-center border border-slate-100 dark:border-white/5 transition-transform hover:scale-[1.02] relative overflow-hidden">
