@@ -28,7 +28,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     const timeout = setTimeout(() => {
       if (tourStep === "1" && pathname === "/dashboard") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -39,6 +39,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Your personalized dashboard tracks every peer you invite. Use your unique referral link to bring students to the platform and earn points!',
                 side: "top",
                 align: 'center',
+                doneBtnText: 'Next →',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "2");
@@ -51,7 +53,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         d.drive();
       } else if (tourStep === "2" && pathname === "/dashboard/leaderboard") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -62,6 +64,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'See how you stack up against other ambassadors across the country. The higher your rank, the better your rewards!',
                 side: "top",
                 align: 'center',
+                doneBtnText: 'Next →',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "3");
@@ -74,7 +78,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         d.drive();
       } else if (tourStep === "3" && pathname === "/dashboard/rewards") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -85,6 +89,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Redeem your points for official BSPrep Swag, custom .XYZ domains, and personalized Letters of Recommendation!',
                 side: "top",
                 align: 'center',
+                doneBtnText: 'Next →',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "4");
@@ -97,7 +103,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         d.drive();
       } else if (tourStep === "4" && pathname === "/dashboard/bounties") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -108,6 +114,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Want to earn points faster? Complete high-value tasks like Instagram posts or hosting campus sessions, and submit proof right here.',
                 side: "top",
                 align: 'center',
+                doneBtnText: 'Next →',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "5");
@@ -120,7 +128,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         d.drive();
       } else if (tourStep === "5" && pathname === "/dashboard/referrals") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -131,6 +139,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Keep track of every single student who signs up using your code. Watch your network and influence grow!',
                 side: "top",
                 align: 'center',
+                doneBtnText: 'Next →',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "6");
@@ -143,7 +153,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         d.drive();
       } else if (tourStep === "6" && pathname === "/dashboard/announcements") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -154,6 +164,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Never miss an update. New bounties, townhall meetings, and program announcements will appear here.',
                 side: "top",
                 align: 'center',
+                doneBtnText: 'Next →',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "7");
@@ -167,7 +179,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         d.drive();
       } else if (tourStep === "7" && pathname === "/dashboard") {
         const d = driver({
-          showProgress: true,
+          showProgress: false,
           allowClose: false,
           popoverClass: 'driverjs-theme',
           steps: [
@@ -178,7 +190,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
                 description: 'Click here to access your Settings, download your Official ID Card, and view your digital assets!',
                 side: "bottom",
                 align: 'end',
-                nextBtnText: 'Finish',
+                doneBtnText: 'Finish',
+                showButtons: ['next'],
                 onNextClick: () => {
                   d.destroy();
                   localStorage.setItem("bsprep_tour_step", "completed");
