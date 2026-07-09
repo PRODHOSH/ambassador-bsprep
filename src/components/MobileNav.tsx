@@ -7,6 +7,11 @@ import { LayoutDashboard, Target, Users, Trophy, Gift } from "lucide-react";
 export default function MobileNav() {
   const pathname = usePathname();
 
+  // Do not show mobile nav on the login page
+  if (pathname === "/dashboard/login") {
+    return null;
+  }
+
   const navItems = [
     { name: "Home", href: "/dashboard", icon: LayoutDashboard },
     { name: "Rank", href: "/dashboard/leaderboard", icon: Trophy },

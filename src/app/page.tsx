@@ -4,6 +4,7 @@ import Timeline from "@/components/Timeline";
 import Benefits from "@/components/Benefits";
 import Features from "@/components/Features";
 import Faq from "@/components/Faq";
+import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Benefits />
       <Features />
       <Faq />
+      <Cta />
       <Footer />
     </main>
   );

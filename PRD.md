@@ -9,19 +9,6 @@ The BSPrep Ambassador Portal is a private, exclusive dashboard designed for "Gro
 - **Authentication:** NextAuth.js (Auth.js) - Google Provider (already configured in `.env.local`)
 - **Deployment:** Vercel
 
-## 3. Design & UI Specifications
-- **Theme:** Beige, Blue, and Black.
-- **Vibe:** Exclusive, premium, clean.
-
-## 4. Authentication Flow (Strict Gating)
-- **Login Page Structure:** Split-screen layout.
-  - *Left Side:* High-quality brand image/design graphic.
-  - *Right Side:* Minimalist login box featuring only a "Continue with Google" button.
-- **Authorization Logic:** 
-  - The portal is strictly invite-only. 
-  - In the database, there must be an `ApprovedAmbassadors` table (or an `isApproved` flag on the `User` model).
-  - During the NextAuth callback, the backend MUST verify that the Google Email exists in the approved list. If it does not, throw an "Unauthorized Email" error and deny entry.
-
 ## 5. Core Features
 
 ### A. The Referral Engine
